@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./DCPJavascript.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <title>Digit Clock Project</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #2C3333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* background-color: #2C3333; */
+        }
+
+        .color-clock {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            /* width: 600px; */
+            display: flex;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+            background-color: #0A4D68;
+        }
+
+        .color-clock::before{
+            content: '';
+            position: absolute;
+            border-radius: 20px;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: #fff;
+            z-index: -1;
+        }
+
+        .color-clock::after{
+            content: '';
+            position: absolute;
+            border-radius: 20px;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: #fff;
+            z-index: -2;
+            filter: blur(50px);
+        }
+
+        .color-clock::before,.color-clock::after{
+            background: linear-gradient(235deg, #2C3333, #00FFCA, #2C3333);
+        }
+
+        .clock-style {
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            width: 100px;
+            height: 100px;
+            background-color: #088395;
+            border-radius: 10px;
+            font-size: 70px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .space {
+            align-items: center;
+            display: flex;
+            color: #00FFCA;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="color-clock">
+            <div id="hours" class="clock-style">10</div>
+            <div class="space">:</div>
+            <div id="minutes" class="clock-style">10</div>
+            <div class="space">:</div>
+            <div id="seconds" class="clock-style">10</div>
+            <div class="space">:</div>
+            <div id="amPm" class="clock-style" style="font-size: 50px;">AM</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
